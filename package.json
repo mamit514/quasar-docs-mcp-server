@@ -1,0 +1,52 @@
+{
+  "name": "quasar-docs-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Quasar Framework documentation - access Quasar docs directly from Claude Code",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "quasar-docs-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "quasar",
+    "quasar-framework",
+    "documentation",
+    "claude",
+    "claude-code",
+    "ai-tools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliaks-ei/quasar-docs-mcp.git"
+  },
+  "homepage": "https://github.com/aliaks-ei/quasar-docs-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/aliaks-ei/quasar-docs-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
