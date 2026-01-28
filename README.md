@@ -12,7 +12,15 @@ An MCP (Model Context Protocol) server that provides access to the [Quasar Frame
 
 ## Installation
 
-### Option 1: Install from npm (Recommended)
+### Option 1: npx (Recommended)
+
+Add directly to Claude Code without installing:
+
+```bash
+claude mcp add quasar-docs -- npx quasar-docs-mcp
+```
+
+### Option 2: Install from npm
 
 ```bash
 npm install -g quasar-docs-mcp
@@ -24,7 +32,7 @@ Then add to Claude Code:
 claude mcp add quasar-docs -- quasar-docs-mcp
 ```
 
-### Option 2: Clone and Build
+### Option 3: Clone and Build
 
 ```bash
 # Clone the repository
@@ -44,14 +52,6 @@ claude mcp add --scope project quasar-docs -- node /absolute/path/to/quasar-docs
 
 # Or user-scoped (available in all projects)
 claude mcp add --scope user quasar-docs -- node /absolute/path/to/quasar-docs-mcp/dist/index.js
-```
-
-### Option 3: npx (No Installation)
-
-Add directly to Claude Code without installing:
-
-```bash
-claude mcp add quasar-docs -- npx quasar-docs-mcp
 ```
 
 ## Verify Installation
