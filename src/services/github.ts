@@ -1,13 +1,19 @@
 import type { Cache, CacheEntry } from '../types/index.js'
-
-const GITHUB_RAW_BASE =
-  'https://raw.githubusercontent.com/quasarframework/quasar/dev/docs/src/pages'
-const GITHUB_API_BASE =
-  'https://api.github.com/repos/quasarframework/quasar/contents/docs/src/pages'
-
-const CACHE_TTL_MS = 30 * 60 * 1000 // 30 minutes
+import { GITHUB_RAW_BASE, GITHUB_API_BASE, CACHE_TTL_MS } from '../constants.js'
 
 const cache: Cache = new Map()
+
+function getAuthHeaders(): Record<string, string> {
+  const headers: Record<string, string> = {
+    'User-Agent': 'quasar-docs-mcp/1.0.0',
+  }
+
+  if (process.env.GITHUB_TOKEN) {
+    headers['Authorization'] = `Bearer ${process.env.GITHUB_TOKEN}`
+  }
+
+  return headers
+}
 
 function getCached(key: string): string | null {
   const entry = cache.get(key)
@@ -39,9 +45,7 @@ export async function fetchRawFile(path: string): Promise<string | null> {
 
   try {
     const response = await fetch(url, {
-      headers: {
-        'User-Agent': 'quasar-docs-mcp/1.0.0',
-      },
+      headers: getAuthHeaders(),
     })
 
     if (!response.ok) {
@@ -73,7 +77,7 @@ export async function fetchDirectoryContents(path: string): Promise<GitHubTreeIt
   try {
     const response = await fetch(url, {
       headers: {
-        'User-Agent': 'quasar-docs-mcp/1.0.0',
+        ...getAuthHeaders(),
         Accept: 'application/vnd.github.v3+json',
       },
     })

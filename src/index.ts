@@ -3,20 +3,32 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 
-import { getComponentSchema, getComponent } from './tools/get-component.js'
-import { getPageSchema, getPage } from './tools/get-page.js'
-import { searchDocsSchema, searchDocs } from './tools/search-docs.js'
-import { listSectionsSchema, listSections } from './tools/list-sections.js'
+import {
+  getComponentSchema,
+  getComponent,
+  getComponentToolConfig,
+} from './tools/get-component.js'
+import { getPageSchema, getPage, getPageToolConfig } from './tools/get-page.js'
+import {
+  searchDocsSchema,
+  searchDocs,
+  searchDocsToolConfig,
+} from './tools/search-docs.js'
+import {
+  listSectionsSchema,
+  listSections,
+  listSectionsToolConfig,
+} from './tools/list-sections.js'
 
 const server = new McpServer({
-  name: 'quasar-docs',
+  name: 'quasar-docs-mcp-server',
   version: '1.0.0',
 })
 
 // Tool: Get Quasar Component documentation
 server.tool(
-  'get_quasar_component',
-  'Get documentation for a specific Quasar UI component. Returns the full markdown documentation including API, props, events, slots, and examples.',
+  getComponentToolConfig.name,
+  getComponentToolConfig.description,
   getComponentSchema.shape,
   async (input) => {
     const result = await getComponent(input)
@@ -25,6 +37,12 @@ server.tool(
       return {
         content: [{ type: 'text', text: result.error }],
         isError: true,
+      }
+    }
+
+    if (input.response_format === 'json') {
+      return {
+        content: [{ type: 'text', text: result.content }],
       }
     }
 
@@ -41,8 +59,8 @@ server.tool(
 
 // Tool: Get any Quasar documentation page
 server.tool(
-  'get_quasar_page',
-  'Get any Quasar documentation page by its path. Use this for non-component docs like style guides, plugins, CLI docs, etc.',
+  getPageToolConfig.name,
+  getPageToolConfig.description,
   getPageSchema.shape,
   async (input) => {
     const result = await getPage(input)
@@ -51,6 +69,12 @@ server.tool(
       return {
         content: [{ type: 'text', text: result.error }],
         isError: true,
+      }
+    }
+
+    if (input.response_format === 'json') {
+      return {
+        content: [{ type: 'text', text: result.content }],
       }
     }
 
@@ -67,8 +91,8 @@ server.tool(
 
 // Tool: Search Quasar documentation
 server.tool(
-  'search_quasar_docs',
-  'Search the Quasar documentation for a topic, component, or feature. Returns a list of matching pages with their paths and URLs.',
+  searchDocsToolConfig.name,
+  searchDocsToolConfig.description,
   searchDocsSchema.shape,
   async (input) => {
     const result = await searchDocs(input)
@@ -81,8 +105,8 @@ server.tool(
 
 // Tool: List documentation sections
 server.tool(
-  'list_quasar_sections',
-  'List all available Quasar documentation sections, or list pages within a specific section. Useful for discovering what documentation is available.',
+  listSectionsToolConfig.name,
+  listSectionsToolConfig.description,
   listSectionsSchema.shape,
   async (input) => {
     const result = await listSections(input)
